@@ -23,36 +23,7 @@ export const parseFile = (fn, options) => {
           return [];
         } else if (line?.length > 0) {
           if (line.match(/\[.*\]/g)?.length > 0) {
-            if (line.match(/\".*\"/g)?.length > 0) {
-              return line
-                .replace(/\[/g, '')
-                .replace(/\]/g, '')
-                .replace(/['"]+/g, '')
-                .split(',')
-                .map((v) => {
-                  if (!isNaN(v)) {
-                    return Number(v);
-                  } else if (v === 'null') {
-                    return null;
-                  } else {
-                    return v;
-                  }
-                });
-            } else {
-              return line
-                .replace(/\[/g, '')
-                .replace(/\]/g, '')
-                .split(',')
-                .map((v) => {
-                  if (!isNaN(v)) {
-                    return Number(v);
-                  } else if (v === 'null') {
-                    return null;
-                  } else {
-                    return v;
-                  }
-                });
-            }
+            return JSON.parse(line);
           } else if (line.match(/\".*\"/g)?.length > 0) {
             return line.replace(/['"]+/g, '');
           } else if (!isNaN(line)) {

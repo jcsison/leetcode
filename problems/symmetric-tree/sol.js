@@ -32,4 +32,28 @@ var isSymmetric = function (root) {
   return f(root.left, root.right);
 };
 
-parseFile(isSymmetric, { tree: true });
+var isSymmetricI = function (root) {
+  const queue = [root, root];
+
+  while (queue.length > 0) {
+    let node1 = queue.shift();
+    let node2 = queue.shift();
+
+    if (!node1 && !node2) {
+      continue;
+    } else if (!node1 || !node2) {
+      return false;
+    } else if (node1?.val !== node2?.val) {
+      return false;
+    }
+
+    queue.push(node1?.left ? node1.left : null);
+    queue.push(node2?.right ? node2.right : null);
+    queue.push(node1?.right ? node1.right : null);
+    queue.push(node2?.left ? node2.left : null);
+  }
+
+  return true;
+};
+
+parseFile(isSymmetricI, { tree: true });

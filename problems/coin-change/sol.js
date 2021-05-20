@@ -31,7 +31,6 @@ var coinChange = function (coins, amount) {
 
   const result = change(amount);
 
-  console.log(memo);
   return result === Infinity ? -1 : result;
 };
 
