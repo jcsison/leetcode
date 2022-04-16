@@ -13,17 +13,17 @@ var isAnagram = function (s, t) {
     return false;
   }
 
-  s.split('').forEach((c, i) => {
+  s.split('').forEach(c => {
     map.set(c, map.get(c) !== undefined ? map.get(c) + 1 : 1);
   });
 
-  t.split('').forEach((c, i) => {
+  t.split('').forEach(c => {
     if (map.get(c) > 0) {
       map.set(c, map.get(c) - 1);
     }
   });
 
-  map.forEach((value, key) => {
+  map.forEach(value => {
     if (value > 0) {
       isAnagram = false;
       return;

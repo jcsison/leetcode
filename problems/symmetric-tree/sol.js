@@ -12,7 +12,7 @@ import { parseFile } from '../../utils/parseFile.js';
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isSymmetric = function (root) {
+var _isSymmetric = function (root) {
   const f = (node1, node2) => {
     if (!node1 && !node2) {
       return true;

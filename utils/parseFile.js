@@ -2,8 +2,8 @@ import { toListNode } from './toListNode.js';
 import { toTreeNode } from './toTreeNode.js';
 
 export const parseFile = (fn, options) => {
-  const run = async (...restParams) => {
-    const asyncFn = () => new Promise((resolve) => resolve(fn(...restParams)));
+  const runFunction = async (...restParams) => {
+    const asyncFn = () => new Promise(resolve => resolve(fn(...restParams)));
 
     const startTime = performance.now();
     const result = await asyncFn();
@@ -12,13 +12,51 @@ export const parseFile = (fn, options) => {
     console.log('result: ', result, `\nruntime: ${runtime} ms\n`);
   };
 
-  const fileName = options?.fileName ?? 'in1';
+  const handleLine = async line => {
+    if (line) {
+      let restParams = [line];
 
-  Deno.readTextFile(fileName).then((data) => {
+      if (options?.params && Array.isArray(line)) {
+        restParams = [...line];
+      }
+
+      if (options?.list) {
+        if (options.list === true) {
+          options.list = [true];
+        }
+
+        if (Array.isArray(options?.list)) {
+          options.list.forEach((bool, i) => {
+            if (bool && i < restParams.length) {
+              restParams[i] = toListNode(restParams[i]);
+            }
+          });
+        }
+      }
+
+      if (options?.tree) {
+        if (options.tree === true) {
+          options.tree = [true];
+        }
+
+        if (Array.isArray(options?.tree)) {
+          options.tree.forEach((bool, i) => {
+            if (bool && i < restParams.length) {
+              restParams[i] = toTreeNode(restParams[i]);
+            }
+          });
+        }
+      }
+
+      await runFunction(...restParams);
+    }
+  };
+
+  const processInputFile = data => {
     let input = data
       .trim()
       .split('\n')
-      .map((line) => {
+      .map(line => {
         if (line === '[]') {
           return [];
         } else if (line?.length > 0) {
@@ -45,45 +83,11 @@ export const parseFile = (fn, options) => {
     }
 
     if (input) {
-      input.forEach(async (line) => {
-        if (line) {
-          let restParams = [line];
-
-          if (options?.params && Array.isArray(line)) {
-            restParams = [...line];
-          }
-
-          if (options?.list) {
-            if (options?.list === true) {
-              options.list = [true];
-            }
-
-            if (Array.isArray(options?.list)) {
-              options?.list.forEach((bool, i) => {
-                if (bool && i < restParams.length) {
-                  restParams[i] = toListNode(restParams[i]);
-                }
-              });
-            }
-          }
-
-          if (options?.tree) {
-            if (options?.tree === true) {
-              options.tree = [true];
-            }
-
-            if (Array.isArray(options?.tree)) {
-              options?.tree.forEach((bool, i) => {
-                if (bool && i < restParams.length) {
-                  restParams[i] = toTreeNode(restParams[i]);
-                }
-              });
-            }
-          }
-
-          await run(...restParams);
-        }
-      });
+      input.forEach(handleLine);
     }
-  });
+  };
+
+  const fileName = options?.fileName ?? 'in1';
+
+  Deno.readTextFile(fileName).then(processInputFile);
 };

@@ -1,11 +1,6 @@
-export const toListNode = (head) => {
-  class ListNode {
-    constructor(val, next) {
-      this.val = val === undefined ? null : val;
-      this.next = next === undefined ? null : next;
-    }
-  }
+import { ListNode } from './ListNode.js'
 
+export const toListNode = (head) => {
   if (head) {
     if (head.length === 0) {
       return new ListNode();

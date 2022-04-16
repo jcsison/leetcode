@@ -1,12 +1,6 @@
-export const toTreeNode = (head) => {
-  class TreeNode {
-    constructor(val, left, right) {
-      this.val = val;
-      this.left = left ?? null;
-      this.right = right ?? null;
-    }
-  }
+import { TreeNode } from './TreeNode.js'
 
+export const toTreeNode = (head) => {
   const build = () => {
     if (head.length === 0) {
       return null;

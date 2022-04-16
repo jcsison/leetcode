@@ -1,10 +1,11 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.tabSize": 2,
   "editor.wordWrapColumn": 80,
   "files.insertFinalNewline": true,
   "javascript.preferences.quoteStyle": "single",
+  "prettier.arrowParens": "avoid",
   "prettier.printWidth": 80,
   "prettier.quoteProps": "consistent",
   "prettier.singleQuote": true,
@@ -31,7 +32,7 @@
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
-    "editor.tabSize": 4
+    "editor.tabSize": 2
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
