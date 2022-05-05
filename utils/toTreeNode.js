@@ -1,6 +1,6 @@
-import { TreeNode } from './TreeNode.js'
+import { TreeNode } from './TreeNode.js';
 
-export const toTreeNode = (head) => {
+export const toTreeNode = head => {
   const build = () => {
     if (head.length === 0) {
       return null;

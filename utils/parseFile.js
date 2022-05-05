@@ -13,7 +13,7 @@ export const parseFile = (fn, options) => {
   };
 
   const handleLine = async line => {
-    if (line) {
+    if (line !== undefined) {
       let restParams = [line];
 
       if (options?.params && Array.isArray(line)) {

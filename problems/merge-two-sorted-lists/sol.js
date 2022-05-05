@@ -8,6 +8,11 @@ class ListNode {
 }
 
 /**
+ * Merge Two Sorted Lists
+ *
+ * time: O(n)
+ * space: O(n)
+ *
  * @param {ListNode} l1
  * @param {ListNode} l2
  * @return {ListNode}
