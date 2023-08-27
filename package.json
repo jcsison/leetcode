@@ -1,23 +1,24 @@
 {
   "name": "leetcode",
   "version": "1.0.0",
+  "author": "jcsison",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jcsison/leetcode.git"
-  },
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jcsison/leetcode/issues"
+  "engines": {
+    "npm": "use-bun",
+    "yarn": "use-bun"
   },
-  "homepage": "https://github.com/jcsison/leetcode#readme",
+  "scripts": {
+    "check": "./lib/scripts/check.sh",
+    "install-completion": "./lib/scripts/install_completion.sh",
+    "start": "./lib/scripts/start.sh"
+  },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.19.0",
-    "eslint-config-prettier": "^8.5.0"
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "bun-types": "^0.8.1",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^3.0.2",
+    "typescript": "^5.2.2"
   }
 }

@@ -1,4 +1,4 @@
-import { parseFile } from '../../utils/parseFile.js';
+import { parseFile } from '~/lib';
 
 /**
  * Definition for singly-linked list.

@@ -1,4 +1,4 @@
-import { parseFile } from '../../utils/parseFile.js';
+import { parseFile } from '~/lib';
 
 /**
  * Palindrome Number
@@ -19,13 +19,9 @@ var isPalindrome = function (x) {
       return true;
     }
 
-    const a = Math.trunc(
-      (x / Math.pow(10, Math.trunc(Math.log10(x)) - j)) % 10
-    );
-    const b = Math.trunc(i % 10);
-    // const s = i.toString();
-    // const a = s[j];
-    // const b = s[s.length - 1];
+    const s = i.toString();
+    const a = s[j];
+    const b = s[s.length - 1];
 
     if (a === undefined) {
       return true;

@@ -1,6 +1,11 @@
-import { parseFile } from '../../utils/parseFile.js';
+import { parseFile } from '~/lib';
 
 /**
+ * First Unique Character in a String
+ * 
+ * time: O(n)
+ * space: O(n)
+ * 
  * @param {string} s
  * @return {number}
  */

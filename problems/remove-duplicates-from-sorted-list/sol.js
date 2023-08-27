@@ -1,5 +1,5 @@
 import { ListNode } from '../../utils/ListNode.js'
-import { parseFile } from '../../utils/parseFile.js';
+import { parseFile } from '~/lib';
 
 /**
  * Definition for singly-linked list.
