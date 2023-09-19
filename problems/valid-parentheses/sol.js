@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Valid Parentheses
@@ -27,4 +27,4 @@ var isValid = function (s) {
   }, []).length;
 };
 
-parseFile(isValid);
+checkSolution(isValid);

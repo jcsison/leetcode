@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Definition for a binary tree node.
@@ -56,4 +56,4 @@ var isSymmetricI = function (root) {
   return true;
 };
 
-parseFile(isSymmetricI, { tree: true });
+checkSolution(isSymmetricI, { tree: true });

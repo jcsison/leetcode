@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {number[]} nums
@@ -46,4 +46,4 @@ var threeSum = function (nums) {
     .map((triplet) => JSON.parse(triplet));
 };
 
-parseFile(threeSum);
+checkSolution(threeSum);

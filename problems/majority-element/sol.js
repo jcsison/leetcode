@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Majority Element
@@ -18,4 +18,4 @@ var majorityElement = function (nums) {
   }, 0);
 };
 
-parseFile(majorityElement);
+checkSolution(majorityElement);

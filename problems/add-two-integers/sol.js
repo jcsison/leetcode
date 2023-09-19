@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Add Two Integers
@@ -14,4 +14,4 @@ var sum = function (num1, num2) {
   return num1 + num2;
 };
 
-parseFile(sum, { params: 2 });
+checkSolution(sum);

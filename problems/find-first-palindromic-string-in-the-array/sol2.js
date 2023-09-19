@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Find First Palindromic String in the Array
@@ -22,4 +22,4 @@ var firstPalindrome = function (words) {
   );
 };
 
-parseFile(firstPalindrome);
+checkSolution(firstPalindrome);

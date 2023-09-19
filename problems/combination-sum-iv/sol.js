@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {number[]} nums
@@ -32,4 +32,4 @@ var combinationSum4 = function (nums, target) {
   return combination(target);
 };
 
-parseFile(combinationSum4, { params: 2 });
+checkSolution(combinationSum4);

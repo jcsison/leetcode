@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {number[]} candidates
@@ -46,4 +46,4 @@ var combinationSum = function (candidates, target) {
   return memo.get(target);
 };
 
-parseFile(combinationSum, { params: 2 });
+checkSolution(combinationSum);

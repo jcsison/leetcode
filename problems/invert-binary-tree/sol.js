@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Invert Binary Tree
@@ -36,4 +36,4 @@ var invertTree = function (root) {
   return root;
 };
 
-parseFile(invertTree, { tree: true });
+checkSolution(invertTree, { tree: true });

@@ -1,10 +1,10 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Fibonacci Number
  *
  * @description Fibonacci number implementation using a for loop.
- * 
+ *
  * time: O(n)
  * space: O(1)
  *
@@ -33,4 +33,4 @@ var fib = function (n) {
   return result;
 };
 
-parseFile(fib);
+checkSolution(fib);

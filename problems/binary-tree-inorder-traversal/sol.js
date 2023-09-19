@@ -1,11 +1,11 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Binary Tree Inorder Traversal
- * 
+ *
  * time: O(n)
  * space: O(n)
- * 
+ *
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
  *     this.val = (val===undefined ? 0 : val)
@@ -35,4 +35,4 @@ var inorderTraversal = function (root) {
   return nodes;
 };
 
-parseFile(inorderTraversal, { tree: true });
+checkSolution(inorderTraversal, { tree: true });

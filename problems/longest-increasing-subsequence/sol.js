@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {number[]} nums
@@ -49,4 +49,4 @@ var lengthOfLIS = function (nums) {
   return maxLength === -1 ? 1 : maxLength;
 };
 
-parseFile(lengthOfLIS);
+checkSolution(lengthOfLIS);

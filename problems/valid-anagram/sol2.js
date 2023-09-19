@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {string} s
@@ -30,4 +30,4 @@ var isAnagram = function (s, t) {
   return true;
 };
 
-parseFile(isAnagram, { params: 2 });
+checkSolution(isAnagram);

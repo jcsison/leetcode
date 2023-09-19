@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Definition for a binary tree node.
@@ -26,4 +26,4 @@ var isValidBST = function (root) {
   return next(root, -Infinity, Infinity);
 };
 
-parseFile(isValidBST, { tree: true });
+checkSolution(isValidBST, { tree: true });

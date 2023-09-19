@@ -1,5 +1,5 @@
 export * from './ListNode';
 export * from './TreeNode';
-export * from './parseFile';
+export * from './checkSolution';
 export * from './toListNode';
 export * from './toTreeNode';

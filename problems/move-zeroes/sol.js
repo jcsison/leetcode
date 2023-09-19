@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Move Zeroes
@@ -22,4 +22,4 @@ var moveZeroes = function (nums) {
   }
 };
 
-parseFile(moveZeroes);
+checkSolution(moveZeroes);

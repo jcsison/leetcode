@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Palindrome Number
@@ -35,4 +35,4 @@ var isPalindrome = function (x) {
   return true;
 };
 
-parseFile(isPalindrome);
+checkSolution(isPalindrome);

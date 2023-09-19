@@ -1,6 +1,11 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
+ * Valid Palindrome
+ *
+ * time: O(n)- completion time scales linearly with input string size
+ * space: O(n) - one new string is created with the same size as the input
+ *
  * @param {string} s
  * @return {boolean}
  */
@@ -16,4 +21,4 @@ var isPalindrome = function (s) {
   return true;
 };
 
-parseFile(isPalindrome);
+checkSolution(isPalindrome);

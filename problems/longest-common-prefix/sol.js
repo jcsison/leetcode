@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {string[]} strs
@@ -23,4 +23,4 @@ var longestCommonPrefix = function (strs) {
   return prefix;
 };
 
-parseFile(longestCommonPrefix);
+checkSolution(longestCommonPrefix);

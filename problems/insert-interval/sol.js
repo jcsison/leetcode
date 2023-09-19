@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {number[][]} intervals
@@ -37,4 +37,4 @@ var insert = function (intervals, newInterval) {
   }
 };
 
-parseFile(insert, { params: 2 });
+checkSolution(insert);

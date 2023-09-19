@@ -1,16 +1,17 @@
 import { ListNode, TreeNode, toListNode, toTreeNode } from '.';
 
-interface ParseFileOptions {
+interface checkSolutionOptions {
   fileName?: string;
   list?: boolean | boolean[];
-  params?: number;
   tree?: boolean | boolean[];
 }
 
-export const parseFile = (
+export const checkSolution = (
   fn?: (...restParams: any[]) => void,
-  options?: ParseFileOptions,
+  options?: checkSolutionOptions,
 ) => {
+  const params = fn?.length;
+
   const runFunction = async (...restParams: unknown[]) => {
     const asyncFn = () => new Promise(resolve => resolve(fn?.(...restParams)));
 
@@ -28,7 +29,11 @@ export const parseFile = (
 
     let restParams: unknown[] = [line];
 
-    if (options?.params && Array.isArray(line)) {
+    if (params && Array.isArray(line)) {
+      if (line.filter(v => v !== undefined).length === 0) {
+        return;
+      }
+
       restParams = [...line];
     }
 
@@ -85,11 +90,11 @@ export const parseFile = (
         }
       });
 
-    if (options?.params) {
+    if (params) {
       const resizedInput = [];
 
       while (input.length) {
-        resizedInput.push(input.splice(0, options.params));
+        resizedInput.push(input.splice(0, params));
       }
 
       input = resizedInput;

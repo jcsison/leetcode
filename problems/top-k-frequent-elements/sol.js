@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {number[]} nums
@@ -18,4 +18,4 @@ var topKFrequent = function (nums, k) {
   return frequencyArray.map((arr) => arr[0]).splice(0, k);
 };
 
-parseFile(topKFrequent, { params: 2 });
+checkSolution(topKFrequent);

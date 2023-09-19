@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Find the Distance Value Between Two Arrays
@@ -24,7 +24,7 @@ var findTheDistanceValue = function (arr1, arr2, d) {
     while (low < high) {
       const mid = Math.trunc((low + high) / 2);
       if (Math.abs(num1 - arr2s[mid]) <= d) {
-        count--; 
+        count--;
         mid2 = mid;
         break;
       } else if (num1 < arr2s[mid]) {
@@ -39,4 +39,4 @@ var findTheDistanceValue = function (arr1, arr2, d) {
   return count;
 };
 
-parseFile(findTheDistanceValue, { params: 3 });
+checkSolution(findTheDistanceValue);

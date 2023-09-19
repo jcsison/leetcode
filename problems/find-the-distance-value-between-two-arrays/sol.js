@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Find the Distance Value Between Two Arrays
@@ -26,4 +26,4 @@ var findTheDistanceValue = function (arr1, arr2, d) {
   return count;
 };
 
-parseFile(findTheDistanceValue, { params: 3 });
+checkSolution(findTheDistanceValue);

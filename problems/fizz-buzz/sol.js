@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Fizz Buzz
@@ -21,4 +21,4 @@ var fizzBuzz = function (n) {
   );
 };
 
-parseFile(fizzBuzz);
+checkSolution(fizzBuzz);

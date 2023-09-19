@@ -1,6 +1,6 @@
 import type { Maybe } from '..';
 
-export class TreeNode<T> extends Array {
+export class TreeNode<T = unknown> extends Array {
   val: T | null;
   left: TreeNode<T> | null;
   right: TreeNode<T> | null;

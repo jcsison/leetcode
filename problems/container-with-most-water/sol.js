@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {number[]} height
@@ -26,4 +26,4 @@ var maxArea = function (height) {
   return area;
 };
 
-parseFile(maxArea);
+checkSolution(maxArea);

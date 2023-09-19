@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 class ListNode {
   constructor(val, next) {
@@ -37,4 +37,4 @@ var mergeTwoLists = function (l1, l2) {
   return head.next;
 };
 
-parseFile(mergeTwoLists, { params: 2, list: [true, true] });
+checkSolution(mergeTwoLists, { list: [true, true] });

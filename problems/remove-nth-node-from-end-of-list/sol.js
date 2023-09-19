@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Definition for singly-linked list.
@@ -39,4 +39,4 @@ var removeNthFromEnd = function (head, n) {
   return head;
 };
 
-parseFile(removeNthFromEnd, { list: true, params: 2 });
+checkSolution(removeNthFromEnd, { list: true });

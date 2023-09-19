@@ -1,6 +1,11 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
+ * Valid Anagram
+ *
+ * time: O(n)
+ * space: O(n)
+ *
  * @param {string} s
  * @param {string} t
  * @return {boolean}
@@ -33,4 +38,4 @@ var isAnagram = function (s, t) {
   return isAnagram;
 };
 
-parseFile(isAnagram, { params: 2 });
+checkSolution(isAnagram);

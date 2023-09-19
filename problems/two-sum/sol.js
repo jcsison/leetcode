@@ -1,11 +1,11 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Two Sum
- * 
- * time: O(n)
- * space: O(n)
- * 
+ *
+ * time: O(n) - completion time scales linearly with input size
+ * space: O(n) - map size is proportional to input size
+ *
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
@@ -24,4 +24,4 @@ var twoSum = function (nums, target) {
   return [];
 };
 
-parseFile(twoSum, { params: 2 });
+checkSolution(twoSum);

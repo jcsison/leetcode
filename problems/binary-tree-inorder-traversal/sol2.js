@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Binary Tree Inorder Traversal
@@ -39,4 +39,4 @@ var inorderTraversal = function (root) {
   return nodes;
 };
 
-parseFile(inorderTraversal, { tree: true });
+checkSolution(inorderTraversal, { tree: true });

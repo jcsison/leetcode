@@ -1,11 +1,11 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Contains Duplicate
- * 
+ *
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {number[]} nums
  * @return {boolean}
  */
@@ -21,4 +21,4 @@ var containsDuplicate = function (nums) {
   return false;
 };
 
-parseFile(containsDuplicate);
+checkSolution(containsDuplicate);

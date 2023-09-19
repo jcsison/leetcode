@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {number[]} coins
@@ -34,4 +34,4 @@ var coinChange = function (coins, amount) {
   return result === Infinity ? -1 : result;
 };
 
-parseFile(coinChange, { params: 2 });
+checkSolution(coinChange);

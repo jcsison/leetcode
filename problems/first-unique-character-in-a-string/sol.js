@@ -1,11 +1,11 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * First Unique Character in a String
- * 
+ *
  * time: O(n)
  * space: O(n)
- * 
+ *
  * @param {string} s
  * @return {number}
  */
@@ -26,4 +26,4 @@ var firstUniqChar = function (s) {
   return firstIndex;
 };
 
-parseFile(firstUniqChar);
+checkSolution(firstUniqChar);

@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Definition for a binary tree node.
@@ -17,4 +17,4 @@ var maxDepth = function (node) {
   return Math.max(maxDepth(node.left) + 1, maxDepth(node.right) + 1);
 };
 
-parseFile(maxDepth, { tree: true });
+checkSolution(maxDepth, { tree: true });

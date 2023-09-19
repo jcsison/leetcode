@@ -1,6 +1,6 @@
 import type { Maybe } from '..';
 
-export class ListNode<T> extends Array {
+export class ListNode<T = unknown> extends Array {
   val: T | null;
   next: ListNode<T> | null;
 

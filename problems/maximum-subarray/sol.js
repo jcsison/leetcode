@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {number[]} nums
@@ -37,4 +37,4 @@ var maxSubArray = function (nums) {
   return traverse(nums, 0, nums.length - 1);
 };
 
-parseFile(maxSubArray);
+checkSolution(maxSubArray);

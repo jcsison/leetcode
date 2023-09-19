@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {string} digits
@@ -37,4 +37,4 @@ var letterCombinations = function (digits) {
   return combinations;
 };
 
-parseFile(letterCombinations);
+checkSolution(letterCombinations);

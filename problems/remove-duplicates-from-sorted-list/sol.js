@@ -1,5 +1,5 @@
 import { ListNode } from '../../utils/ListNode.js'
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Definition for singly-linked list.
@@ -30,4 +30,4 @@ var deleteDuplicates = function(head) {
     return head;
 };
 
-parseFile(deleteDuplicates, { list: true });
+checkSolution(deleteDuplicates, { list: true });

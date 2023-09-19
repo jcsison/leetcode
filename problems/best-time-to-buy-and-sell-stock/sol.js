@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * Best Time to Buy and Sell Stock
@@ -21,4 +21,4 @@ var maxProfit = function (prices) {
   return profit;
 };
 
-parseFile(maxProfit);
+checkSolution(maxProfit);

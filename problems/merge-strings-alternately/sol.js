@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {string} word1
@@ -16,4 +16,4 @@ var mergeAlternately = function (word1, word2) {
   return merged;
 };
 
-parseFile(mergeAlternately, { params: 2 });
+checkSolution(mergeAlternately);

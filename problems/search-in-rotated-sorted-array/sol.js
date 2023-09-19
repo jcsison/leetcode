@@ -1,4 +1,4 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
 /**
  * @param {number[]} nums
@@ -30,4 +30,4 @@ var search = function (nums, target) {
   return -1;
 };
 
-parseFile(search, { params: 2 });
+checkSolution(search);

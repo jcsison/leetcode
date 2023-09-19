@@ -1,3 +1,3 @@
-import { parseFile } from '~/lib';
+import { checkSolution } from '~/lib';
 
-parseFile();
+checkSolution();
